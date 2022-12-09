@@ -1,3 +1,13 @@
+const circle = document.getElementById('circle');
+const circleStyle = circle.style;
+
+document.addEventListener('mousemove', e => {
+  window.requestAnimationFrame(() => {
+    circleStyle.top = `${ e.clientY - circle.offsetHeight/2 }px`;
+    circleStyle.left = `${ e.clientX - circle.offsetWidth/2 }px`;
+  });
+});
+
 // ============================ SAMEN MET CODEPEN =======================
 
 
@@ -109,3 +119,7 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+// ================= MOUSE ANIMATIONS ===============
+
+
