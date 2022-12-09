@@ -1,3 +1,6 @@
+// ============================ SAMEN MET CODEPEN =======================
+
+
 "use strict";
 const leftArrow = document.querySelector(".left-control"),
     rightArrow = document.querySelector(".right-control"),
@@ -32,8 +35,6 @@ function scrollLeft() {
 
 
 }
-
-
 // Scroll Events
 slider.addEventListener("click", function (ev) {
     if (ev.target === leftArrow) {
@@ -49,6 +50,9 @@ slider.addEventListener("click", function (ev) {
     }
 });
 
+
+// ================ Justus opdracht =================
+
 const infoRight = document.querySelector(".more-info-card");
 const infoRightBtn = document.querySelector(".js-right")
 
@@ -58,24 +62,8 @@ function toggleSideContent() {
         infoRightBtn.classList.toggle('active');
 }
 
-// const track = document.getElementById("image-track")
-// window.onmousedown = e => {
-//     track.dataset.mouseDownAt = e.clientX;
-// }
 
-// window.onmousemove = e => {
-//     if(track.dataset.mouseDownAt === "0") return;
-
-//     const mousedelta = parseFloat (track.dataset.mouseDownAt) - e.clientX
-//         maxDelta = window.innerWidth / 2;
-
-//     const percentage = (mousedelta / maxDelta) * 100;
-
-//     track.style.transform = `translate(${nextPercentage}%, -50%)`;
-
-// }
-
-// ============= GEKKE SLIDER =============
+// ============= GEKKE SLIDER SAMEN MET TUTORIAL =============
 
 const track = document.getElementById("image-track");
 
