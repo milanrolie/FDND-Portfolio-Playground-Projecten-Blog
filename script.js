@@ -61,16 +61,28 @@ slider.addEventListener("click", function (ev) {
 });
 
 
-// ================ Justus opdracht =================
+// ================ opdracht =================
 
 const infoRight = document.querySelector(".more-info-card");
 const infoRightBtn = document.querySelector(".js-right")
+const leftBarText = Document.querySelector(".left-bar-text")
+const leftBarImage = Document.querySelector(".left-bar-image")
+
 
 
 function toggleSideContent() {
     infoRight.classList.toggle('active'),
-        infoRightBtn.classList.toggle('active');
+    infoRightBtn.classList.toggle('active');
+    leftBarText.classList.toggle('active');
+    leftBarImage.classList.toggle('active');
+
+    
+
 }
+
+
+
+
 
 
 // ============= GEKKE SLIDER SAMEN MET TUTORIAL =============

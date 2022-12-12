@@ -4,14 +4,12 @@
 :root {
     --font-color: #ffdcdc;
     /* cursor: none !important;  */
-
 }
 
 html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'urbanist', sans-serif;
-
 }
 
 main {
@@ -23,7 +21,6 @@ nav {
     font-family: 'urbanist', sans-serif;
     font-weight: 500;
     color: #ffdcdc;
-
 }
 
 ul {
@@ -71,9 +68,9 @@ header {
     background-color: black;
 } */
 
-.studio:hover  #circle {
+/* .studio:hover  #circle {
     height: 500px !important;
-}
+} */
 
 .wrapper {
     height: 100vh;
@@ -95,7 +92,22 @@ header {
     z-index: 100;
 }
 
+
 .more-info.active {
+    left: 1%;
+}
+
+.left-bar-text {
+    position: absolute;
+    left: -10%;
+    top: 18%;
+    height: 80px;
+    transition: .2s;
+    color: black;
+    z-index: 9999999;
+}
+
+.left-bar-text.active {
     left: 1%;
 }
 
@@ -155,7 +167,6 @@ header {
     grid-row-gap: 0px;
     height: 100vh;
     scroll-snap-align: end;
-
 }
 
 .page3 {
@@ -213,6 +224,10 @@ p {
     color: var(--font-color);
 }
 
+a {
+    color: aliceblue;
+}
+
 .content {
     grid-area: 2 / 3 / 6 / 12;
     position: relative;
@@ -246,7 +261,6 @@ p {
 .slider__slide_yellow {
     margin-left: 3%;
     padding-left: 3%;
-
 }
 
 .slider__slide_red {
@@ -272,10 +286,6 @@ p {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
-}
-
-.corner {
-    /* komt nog */
 }
 
 .control {
@@ -381,7 +391,6 @@ p {
     position: fixed;
     left: 30px;
     bottom: 10px;
-
 }
 
 #image-track>.image {
@@ -423,10 +432,7 @@ p {
     color: white;
 }
 
-body:hover  .circle {
-    transform: scale(5);
+.page1:hover ~ .circle {
+    transform: scale(3);
 }
 
-a {
-    color: aliceblue;
-}
