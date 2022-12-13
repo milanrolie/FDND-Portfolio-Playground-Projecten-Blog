@@ -2,10 +2,10 @@ const circle = document.getElementById('circle');
 const circleStyle = circle.style;
 
 document.addEventListener('mousemove', e => {
-  window.requestAnimationFrame(() => {
-    circleStyle.top = `${ e.clientY - circle.offsetHeight/2 }px`;
-    circleStyle.left = `${ e.clientX - circle.offsetWidth/2 }px`;
-  });
+    window.requestAnimationFrame(() => {
+        circleStyle.top = `${ e.clientY - circle.offsetHeight/2 }px`;
+        circleStyle.left = `${ e.clientX - circle.offsetWidth/2 }px`;
+    });
 });
 
 // ============================ SAMEN MET CODEPEN =======================
@@ -65,8 +65,8 @@ slider.addEventListener("click", function (ev) {
 
 const infoRight = document.querySelector(".more-info-card");
 const infoRightBtn = document.querySelector(".js-right")
-const leftBarText = Document.querySelector(".left-bar-text")
-const leftBarImage = Document.querySelector(".left-bar-image")
+// const leftBarText = Document.querySelector(".left-bar-text")
+// const leftBarImage = Document.querySelector(".left-bar-image")
 
 
 
