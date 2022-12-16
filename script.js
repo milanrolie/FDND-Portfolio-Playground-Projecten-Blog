@@ -1,10 +1,31 @@
 const circle = document.getElementById('circle');
 const circleStyle = circle.style;
+const cursorText = document.querySelector(".cursor-text");
 
 document.addEventListener('mousemove', e => {
     window.requestAnimationFrame(() => {
-        circleStyle.top = `${ e.clientY - circle.offsetHeight/2 }px`;
-        circleStyle.left = `${ e.clientX - circle.offsetWidth/2 }px`;
+        if (e.target.classList.contains('main-image')) {
+            circle.classList.add('biggercircle', 'has-line')
+            cursorText.innerHTML = "view project";
+        } else {
+            circle.classList.remove('biggercircle', 'has-line')
+            cursorText.innerHTML = " ";
+        }
+        if (e.target.classList.contains('wrapper-track') || e.target.closest('.wrapper-track')) {
+            circle.classList.add('hotpink')
+        } else {
+            circle.classList.remove('hotpink')
+        }
+        if (e.target.classList.contains('contact')) {
+            circle.classList.add('smallercircle')
+            // cursorText.innerHTML = "mail me!";
+
+        } else {
+            circle.classList.remove('smallercircle')
+            // cursorText.innerHTML = " ";
+        }
+        circleStyle.top = `${e.clientY - circle.offsetHeight / 2}px`;
+        circleStyle.left = `${e.clientX - circle.offsetWidth / 2}px`;
     });
 });
 
@@ -72,11 +93,11 @@ const infoRightBtn = document.querySelector(".js-right")
 
 function toggleSideContent() {
     infoRight.classList.toggle('active'),
-    infoRightBtn.classList.toggle('active');
+        infoRightBtn.classList.toggle('active');
     leftBarText.classList.toggle('active');
     leftBarImage.classList.toggle('active');
 
-    
+
 
 }
 
@@ -134,4 +155,19 @@ window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 // ================= MOUSE ANIMATIONS ===============
 
+const mouseCircle = document.querySelector('.circle')
+const imageHover = document.querySelector(".main-image")
 
+imageHover.addEventListener('mouseenter', biggerCircle)
+
+
+function biggerCircle() {
+    mouseCircle.classList.add('biggercircle')
+}
+
+imageHover.addEventListener('mouseleave', smallerCircle)
+
+
+function smallerCircle() {
+    mouseCircle.classList.remove('biggercircle')
+}

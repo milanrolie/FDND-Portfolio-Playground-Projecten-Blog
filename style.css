@@ -50,7 +50,7 @@ header {
     z-index: 10;
 }
 
-#circle {
+.circle {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -60,17 +60,46 @@ header {
     transition-delay: .2s;
     transition: ease-in .02s,
     transform ease-in .2s;
-    z-index: 1000000;
+    z-index: 100;
     mix-blend-mode: difference;
 }
 
-/* #circle:hover   {
-    background-color: black;
-} */
+.circle.has-line .line{
+    opacity: 1;
 
-/* .studio:hover  #circle {
-    height: 500px !important;
-} */
+}
+
+.biggercircle{
+    transform: scale(2.5);
+    transition: ease-in .4s,
+}
+
+.smallercircle{
+    transform: scale(.5);
+    transition: ease-in .4s,
+}
+
+.cursor-text {
+    transform: translatey(-40px) translateX(30px);
+    font-family: 'urbanist', sans-serif;
+    font-size: .6em;
+    line-height: .9em;
+    color: hotpink;
+    mix-blend-mode:normal;
+    transition: 1s;
+}
+
+.line {
+    width: 1px;
+    height: 14px;
+    transform: rotate(40deg) translateX(-30px) translateY(-55px);
+    background: red;
+    opacity: 0;
+}
+
+.hotpink {
+    background-color: hotpink;
+}
 
 .wrapper {
     height: 100vh;
@@ -432,7 +461,7 @@ a {
     color: white;
 }
 
-.page1:hover ~ .circle {
+/* .page1:hover ~ .circle {
     transform: scale(3);
-}
+} */
 
